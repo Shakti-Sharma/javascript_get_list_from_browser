@@ -1,13 +1,21 @@
 name: simple
 
-inputs:
-  num-octocats:
-    description: 'Number of Octocats'
-    required: false
-    default: '1'
-  octocat-eye-color:
-    description: 'Eye color of the Octocats'
-    required: true
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        type: choice
+        description: Who to greet
+        options: 
+        - monalisa
+        - cschleiden
+      message:
+        required: true
+      use-emoji:
+        type: boolean
+        description: Include 🎉🤣 emojis
+      environment:
+        type: environment
 jobs:
   ubuntu :
     runs-on: ubuntu-latest
