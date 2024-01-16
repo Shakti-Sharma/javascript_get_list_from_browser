@@ -1,5 +1,13 @@
 name: simple
-on: push
+
+inputs:
+  num-octocats:
+    description: 'Number of Octocats'
+    required: false
+    default: '1'
+  octocat-eye-color:
+    description: 'Eye color of the Octocats'
+    required: true
 jobs:
   ubuntu :
     runs-on: ubuntu-latest
