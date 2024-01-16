@@ -1,4 +1,4 @@
-name: Simple
+name: simple
 on: push
 jobs:
   ubuntu :
